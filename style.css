@@ -1,0 +1,66 @@
+
+/* Variables */
+
+:root {
+
+	/* Sizes */
+
+	--size-1: 16px;
+	--size-2: 24px;
+	--size-3: 32px;
+	--size-4: 48px;
+	--size-5: 64px;
+	--size-6: 80px;
+	--size-7: 96px;
+	--size-8: 112px;
+	--size-9: 144px;
+	--size-10: 160px;
+
+	/* Colors */
+
+	--color-dark: #0e0b0b;
+	--color-light: #f8f8f8;
+	--color-yellow: #FEC700;
+	--color-orange: #FF9900;
+	--color-blue: #0387FF;
+	--color-pink: #D603BE;
+
+	/* Fonts */
+	--font-1: "Oswald", serif;
+
+}
+
+ul{
+	list-style: none;
+}
+
+.card{
+	width: 200px;
+	height: 200px;
+	padding: var(--size-1);
+	border-radius: 100%;
+	border: var(--color-dark) 1px solid;
+	overflow: hidden;
+	margin: var(--size-1);
+}
+
+#image-block{
+	width: 200px;
+	border-radius: 100%;
+
+	img{
+		border-radius: 100%;
+		width: 200px
+	}
+}
+
+#text-block{
+
+}
+
+@media (min-width: 860px) {
+	ul{
+		display: flex;
+		justify-content: center;	
+}
+}

@@ -19,7 +19,7 @@
 	/* Colors */
 
 	--color-dark: #0e0b0b;
-	--color-light: #f8f8f8;
+	--color-light: #ffffff;
 	--color-yellow: #FEC700;
 	--color-orange: #FF9900;
 	--color-blue: #0387FF;
@@ -34,6 +34,7 @@
 header{
 	padding: var(--size-2);
 	border: var(--color-dark) 1px solid;
+	background-color: var(--color-light);
 }
 
 h1{
@@ -66,6 +67,7 @@ ul{
 	border: var(--color-dark) 1px solid;
 	overflow: hidden;
 	margin: var(--size-1);
+	background-color: var(--color-light);
 }
 
 #image-block{

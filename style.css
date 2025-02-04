@@ -214,10 +214,13 @@ ul{
 	border: var(--color-light) 1px solid;
 	overflow: hidden;
 	color: var(--color-light);
+	opacity: 50%;
+	z-index: -1;
 }
 
 .card:hover{
 	background-color: var(--color-dark);
+	opacity: 100%;
 }
 
 #image-block{

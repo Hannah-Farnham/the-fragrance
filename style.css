@@ -54,11 +54,12 @@ header{
 
 h1{
 	font-family: var(--font-2);
-	font-size: var(--size-5);
+	font-size: var(--size-4);
 	font-weight: 100;
 	margin: 0px;
 	text-align: center;
 	color: var(--color-dark);
+	line-height: var(--size-3);
 }
 
 h2{
@@ -75,13 +76,17 @@ h3{
 	font-family: var(--font-3);
 	text-align: center;
 	color: var(--color-dark);
-	font-size: var(--size-2);
+	font-size: var(--size-1);
 }
 
 p{
 	font-family: var(--font-2);
 	text-align: center;
-	font-size: var(--size-1);
+	font-size: calc(var(--size-1)*1.2);
+}
+
+.emphasis{
+	font-style: italic;
 }
 
 ul{
@@ -89,13 +94,12 @@ ul{
 }
 
 .card{
-	width: 200px;
-	height: 200px;
-	padding: var(--size-1);
+	width: 100px;
+	height: 100px;
+	padding: var(--size-2);
 	border-radius: 100%;
 	border: var(--color-light) 1px solid;
 	overflow: hidden;
-	margin: var(--size-1);
 	background-color: var(--color-dark);
 	color: var(--color-light);
 }
@@ -104,8 +108,8 @@ ul{
 
 	img{
 		border-radius: 100%;
-		width: 200px;
-		height: 200px;
+		width: 100px;
+		height: 100px;
 	}
 }
 
@@ -114,6 +118,11 @@ ul{
 }
 
 @media (min-width: 860px) {
+
+	header{
+		padding: var(--size-4);
+	}
+
 	body{
 		display: grid;
 		grid-template-columns: 2fr 4fr;
@@ -126,9 +135,19 @@ ul{
 		justify-content: center;	
 	}
 
+	h1{
+		font-size: var(--size-5);
+		line-height: var(--size-5);
+	}
+
+	h3{
+		font-size: var(--size-2);
+	}
+
 	.card{
 		width: 250px;
 		height: 250px;
+		padding: var(--size-3);
 	}
 
 	#image-block{

@@ -21,6 +21,7 @@
 	--color-dark: #0e0b0b;
 	--color-light: #ffffff;
 	--color-yellow: #FEC700;
+	--color-spicy: #EC522C;
 
 	/* Fonts */
 	--font-1: "neue-haas-grotesk-display", sans-serif;
@@ -31,6 +32,7 @@
 
 body{
 	background-color: var(--color-dark);
+	margin: 0;
 }
 
 header{
@@ -44,6 +46,14 @@ header{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.background-image{
+	height: 100vh;
+	width: 100vw;
+	object-fit: cover;
+	position: absolute;
+	z-index: -1;
 }
 
 .divider-line{
@@ -64,7 +74,6 @@ h1{
 
 h2{
 	font-family: var(--font-1);
-	font-display: uppercase;
 	font-weight: 100;
 	text-transform: uppercase;
 	text-align: center;
@@ -77,6 +86,39 @@ h3{
 	text-align: center;
 	color: var(--color-dark);
 	font-size: var(--size-1);
+}
+
+.bottom-nav{
+	position: fixed;
+	bottom: 0;
+	background-color: var(--color-light);
+	display: flex;
+	justify-content: space-around;
+}
+
+a{
+	font-family: var(--font-1);
+	font-weight: 100;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--color-light);
+	text-decoration: none;
+	padding: var(--size-1);
+	background-color: #0e0b0b;
+	margin: 1px;
+	margin-right: .5px;
+}
+
+.bottom-nav a:first-child:Hover {
+	background-color: var(--color-spicy);
+}
+
+.bottom-nav a:second-child:Hover {
+	background-color: var(--color-spicy);
+}
+
+.bottom-nav a:last-child {
+	margin-right: 1px;
 }
 
 p{
@@ -100,8 +142,11 @@ ul{
 	border-radius: 100%;
 	border: var(--color-light) 1px solid;
 	overflow: hidden;
-	background-color: var(--color-dark);
 	color: var(--color-light);
+}
+
+.card:hover{
+	background-color: var(--color-dark);
 }
 
 #image-block{
@@ -114,7 +159,7 @@ ul{
 }
 
 #text-block{
-
+	border-radius: 100%;
 }
 
 @media (min-width: 860px) {

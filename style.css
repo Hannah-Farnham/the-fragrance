@@ -27,12 +27,16 @@
 	--color-citrus: #ECB92C;
 	--color-woody: #63361A;
 	--color-green: #53A76B;
+	--color-ozonic: #83D8EF;
+	--color-herbal: #166232;
+	--color-resinous: #EA2C2F;
+	--color-smoky: #A99D9A;
+	--color-earthy: #ABBE6F;
 
 	/* Fonts */
 	--font-1: "neue-haas-grotesk-display", sans-serif;
 	--font-2: "adobe-garamond-pro", serif;
 	--font-3: "Cutive Mono", serif;
-
 }
 
 	/* Main */
@@ -103,6 +107,7 @@ h3{
 	display: flex;
 	justify-content: space-around;
 	overflow-x: auto; 
+	width: 100vw;
 }
 
 a{
@@ -116,6 +121,7 @@ a{
 	background-color: #0e0b0b;
 	margin: 1px;
 	margin-right: .5px;
+	flex-grow: 1;
 }
 
 svg {
@@ -151,6 +157,26 @@ svg {
 
 .bottom-nav a:nth-child(7):Hover {
 	background-color: var(--color-green);
+}
+
+.bottom-nav a:nth-child(8):Hover {
+	background-color: var(--color-ozonic);
+}
+
+.bottom-nav a:nth-child(9):Hover {
+	background-color: var(--color-herbal);
+}
+
+.bottom-nav a:nth-child(10):Hover {
+	background-color: var(--color-resinous);
+}
+
+.bottom-nav a:nth-child(11):Hover {
+	background-color: var(--color-smoky);
+}
+
+.bottom-nav a:nth-child(12):Hover {
+	background-color: var(--color-earthy);
 }
 
 .bottom-nav a:last-child {
@@ -205,7 +231,7 @@ ul{
 }
 
 #text-block{
-	border-radius: 100%;
+	border-radius: 100%;	
 }
 
 	/* Media Queries */
@@ -217,7 +243,7 @@ ul{
 	header{
 		padding: var(--size-4);
 		position: absolute;
-		top: 50%;
+		top: 45%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
@@ -248,7 +274,7 @@ ul{
 	.card{
 		width: 250px;
 		height: 250px;
-		padding: var(--size-3);
+		padding: var(--size-1);
 	}
 
 	#image-block{

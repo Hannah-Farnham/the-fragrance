@@ -1,7 +1,7 @@
 let channelSlug = 'the-fragrance' // The “slug” is just the end of the URL
 
 let placeChannelInfo = (data) => {
-	
+
 let title = document.querySelector('#channel-title')
 console.log(data.title)
 
@@ -18,4 +18,21 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 	.then((data) => { // Do stuff with the data
 		console.log(data) // Always good to check your response!
 		placeChannelInfo(data)
+		console.log(data.contents)
+
+		let myFuntion = (block)  => {
+			if (block.class == 'text') {
+				console.log ('text')
+			}
+			console.log(block.title)
+		}
+
+		data.contents.forEach(myFuntion)
 	})
+
+	// Text!
+	else if (block.class == 'Text') {
+		console.log(block)
+		let text-card = 
+		
+	}

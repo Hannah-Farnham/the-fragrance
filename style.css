@@ -221,6 +221,10 @@ a{
 
 	/* Cards */
 
+.card-grid{
+	margin: var(--size-1);
+}
+
 .cards{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

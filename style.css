@@ -109,7 +109,7 @@ h4{
 	font-size: var(--size-1);
 }
 
-#channel-description{
+#fragrance-description{
 	color: var(--color-light);
 	font-weight: 500;
 	font-family: var(--font-5);
@@ -251,7 +251,7 @@ a{
 	margin: 0 auto;
 }
 
-.card{
+.block{
 	aspect-ratio: 1 /1 ;
 	display: flex;
 	align-items: center;
@@ -259,12 +259,12 @@ a{
 	border: var(--color-light) solid 1px;
 }
 
-.card svg {
+.block svg {
 	width: 135px;
 	height: 135px;
   }
 
-.card:hover{
+.block:hover{
 	background-color: black;
 }
 
@@ -362,7 +362,7 @@ a{
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	}
 
-	.card svg {
+	.block svg {
 		width: 200px;
 		height: 200px;
 	  }
@@ -413,7 +413,7 @@ a{
 		padding-bottom: var(--size-4);
 	}
 
-	#channel-description{
+	#fragrance-description{
 		max-width: 1200px;
 		margin: 0 auto;
 		padding-bottom: var(--size-4);

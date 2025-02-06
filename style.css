@@ -65,7 +65,7 @@ body{
 }
 
 header{
-	padding-top: var(--size-4);
+	padding-top: var(--size-2);
 	padding-bottom: var(--size-4);
 }
 
@@ -98,6 +98,7 @@ h2{
 h3{
 	font-family: var(--font-1);
 	font-weight: 100;
+	font-size: calc(var(--size-1)*.8);
 	text-transform: uppercase;
 	text-align: center;
 	color: var(--color-dark);
@@ -128,6 +129,10 @@ p{
 	font-style: italic;
 }
 
+::selection { /* https://www.w3schools.com/howto/howto_css_text_selection.asp */
+	background-color: var(--color-dark); 
+}
+
 	/* Modal */
 
 .modal{
@@ -153,10 +158,12 @@ p{
 	justify-content: space-around;
 	overflow-x: auto; 
 	width: 100vw;
+	padding-bottom: var(--size-3);
 }
 
 a{
 	font-family: var(--font-1);
+	font-size: calc(var(--size-1)*.8);
 	font-weight: 100;
 	text-transform: uppercase;
 	text-align: center;
@@ -171,60 +178,64 @@ a{
 	padding-right: calc(var(--size-1)*.5);
 }
 
-.bottom-nav a:first-child:Hover {
+.top-nav a:first-child:Hover {
 	background-color: var(--color-spicy);
 	transition: fill 1s ease;
 }
 
-.bottom-nav a:nth-child(2):Hover {
+.top-nav a:nth-child(2):Hover {
 	background-color: var(--color-floral);
 }
 
-.bottom-nav a:nth-child(3):Hover {
+.top-nav a:nth-child(3):Hover {
 	background-color: var(--color-musk);
 }
 
-.bottom-nav a:nth-child(4):Hover {
+.top-nav a:nth-child(4):Hover {
 	background-color: var(--color-fruity);
 }
 
-.bottom-nav a:nth-child(5):Hover {
+.top-nav a:nth-child(5):Hover {
 	background-color: var(--color-citrus);
 }
 
-.bottom-nav a:nth-child(6):Hover {
+.top-nav a:nth-child(6):Hover {
 	background-color: var(--color-woody);
 }
 
-.bottom-nav a:nth-child(7):Hover {
+.top-nav a:nth-child(7):Hover {
 	background-color: var(--color-green);
 }
 
-.bottom-nav a:nth-child(8):Hover {
+.top-nav a:nth-child(8):Hover {
 	background-color: var(--color-ozonic);
 }
 
-.bottom-nav a:nth-child(9):Hover {
+.top-nav a:nth-child(9):Hover {
 	background-color: var(--color-herbal);
 }
 
-.bottom-nav a:nth-child(10):Hover {
+.top-nav a:nth-child(10):Hover {
 	background-color: var(--color-resinous);
 }
 
-.bottom-nav a:nth-child(11):Hover {
+.top-nav a:nth-child(11):Hover {
 	background-color: var(--color-smoky);
 }
 
-.bottom-nav a:nth-child(12):Hover {
+.top-nav a:nth-child(12):Hover {
 	background-color: var(--color-earthy);
 }
 
-.bottom-nav a:last-child {
+.top-nav a:last-child {
 	margin-right: 1px;
 }
 
 	/* Cards */
+
+.card-grid{
+	margin: 0 auto;
+}
 
 .cards{
 	display: grid;
@@ -267,6 +278,44 @@ a{
 
 }
 
+	/* Ending Statement */
+
+#section-ending-statement {
+	padding: var(--size-2);
+}
+
+#ending-statement {
+	font-size: var(--size-3);
+	line-height: var(--size-3);
+	color: var(--color-light);
+	width: 80vw;
+	margin: 0 auto;
+}
+
+#e-s-text-variation{
+	font-family: var(--font-1);
+	font-style: normal;
+}
+
+#h3-ending-statement{
+	color: var(--color-light);
+}
+
+	/* Footer */
+
+#footer{
+	display: flex;
+	justify-content: space-around;
+	overflow-x: auto; 
+	width: 100vw;
+}
+
+#footer-text{
+	color: var(--color-light);
+	text-align: left	;
+}
+
+
 	/* Media Queries */
 
 @media (min-width: 860px) {
@@ -286,6 +335,16 @@ a{
 		top: 45%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+	}
+
+	h3{
+		font-size: var(--size-1);
+	}
+
+		/* Nav */
+
+	a{
+		font-size: var(--size-1);
 	}
 
 		/* Cards */
@@ -310,5 +369,29 @@ a{
 		img{
 
 		}
+	}
+
+		/* Ending Statement */
+
+	#section-ending-statement {
+		padding: var(--size-8);
+
+	}
+
+	#ending-statement {
+		font-size: var(--size-5);
+		line-height: var(--size-5);
+		color: var(--color-light);
+		width: 80vw;
+		margin: 0 auto;
+	}
+
+	#e-s-text-variation{
+		font-family: var(--font-1);
+		font-style: normal;
+	}
+
+	#h3-ending-statement{
+		color: var(--color-light);
 	}
 }

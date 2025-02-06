@@ -398,3 +398,31 @@ a{
 		color: var(--color-light);
 	}
 }
+
+@media (min-width: 1500px) {
+
+		/* Nav */
+
+	.top-nav{
+		padding-bottom: var(--size-5);
+	}
+
+		/* Header */
+	#channel-title{
+		line-height: 200px;
+		padding-bottom: var(--size-4);
+	}
+
+	#channel-description{
+		max-width: 1200px;
+		margin: 0 auto;
+		padding-bottom: var(--size-4);
+	}	
+
+		/* Ending Statement */
+
+	#ending-statement {
+		max-width: 1200px;
+	}
+
+}

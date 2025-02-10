@@ -72,7 +72,6 @@ let renderBlock = (block) => {
 			`
 			<li class="text-block">
 				<p>${block.content}</p>
-				<p>${block.description_html}</p>
 			</li>
 			`
 

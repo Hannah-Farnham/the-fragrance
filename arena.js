@@ -32,36 +32,28 @@ let renderBlock = (block) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
 	let channelBlocks = document.getElementById('channel-blocks')
 
-	console.log("is this working")
+	
 	// Links!
 	if (block.class == 'Link') {
 		
 		let linkItem =
-			`
-			<li>
-				<p><em>Link</em></p>
-				<picture>
-					<source media="(max-width: 428px)" srcset="${ block.image.thumb.url }">
-					<source media="(max-width: 640px)" srcset="${ block.image.large.url }">
-					<img src="${ block.image.original.url }">
-				</picture>
-				<h3>${ block.title }</h3>
-				${ block.description_html }
-				<p><a href="${ block.source.url }">See the original ↗</a></p>
-			</li>
-			`
-			console.log ("block",block)
+		`
+		<li>
+		<img src="${block.image.original.url}">
+		</li>
+		`
+		
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
+		
 	}
-
+	
 	// Images!
-	else if (block.id == 'image-block') {
+	else if (block.class == 'Image') {
 
 		let imageItem =
 			`
 			<li class="image-block">
 				<img src="${block.image.original.url}">
-				<p> ${block.image.title}
 			</li>
 			`
 
@@ -70,12 +62,21 @@ let renderBlock = (block) => {
 			}
 
 	// Text!
-	else if (block.id == 'Text') {
-		// …up to you!
+	else if (block.class == 'Text') {
+
+		let textItem =
+			`
+			<li class="text-block">
+				<p>${block.content}</p>
+				<p>${block.description_html}</p>
+			</li>
+			`
+
+		channelBlocks.insertAdjacentHTML('beforeend', textItem)	
 	}
 
 	// Uploaded (not linked) media…
-	else if (block.id == 'Attachment') {
+	else if (block.class == 'Attachment') {
 		let attachment = block.attachment.content_type // Save us some repetition
 
 		// Uploaded videos!
@@ -95,26 +96,27 @@ let renderBlock = (block) => {
 
 		// Uploaded PDFs!
 		else if (attachment.includes('pdf')) {
-			// …up to you!
-		}
 
-		// Uploaded audio!
-		else if (attachment.includes('audio')) {
-			// …still up to you, but here’s an `audio` element:
-			let audioItem =
+			console.log("pdf", block)
+
+			let PdfItem =
 				`
 				<li>
-					<p><em>Audio</em></p>
-					<audio controls src="${ block.attachment.url }"></video>
-				</li>
+					<figure class="pdf-block">
+						<img src="${ block.image.thumb.url }">
+						<figcaption class="pdf-description fira">${ block.title }</figcaption>
+					</figure>
+				<li>
 				`
-			channelBlocks.insertAdjacentHTML('beforeend', audioItem)
-			// More on audio: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
+
+		channelBlocks.insertAdjacentHTML('beforeend', PdfItem)	
+
 		}
+
 	}
 
 	// Linked media…
-	else if (block.id == 'Media') {
+	else if (block.class == 'Media') {
 		let embed = block.embed.type
 
 		// Linked video!
@@ -130,10 +132,6 @@ let renderBlock = (block) => {
 			// More on iframe: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
 		}
 
-		// Linked audio!
-		else if (embed.includes('rich')) {
-			// …up to you!
-		}
 	}
 }
 

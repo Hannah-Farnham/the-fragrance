@@ -100,6 +100,8 @@ h3{
 	text-align: center;
 	color: var(--color-dark);
 	letter-spacing: 1px;
+	margin-left: var(--size-1);
+	margin-right: var(--size-1);
 }
 
 h4{
@@ -239,6 +241,8 @@ a{
 
 .card-grid{
 	margin: 0 auto;
+	margin-left: var(--size-1);
+	margin-right: var(--size-1);
 }
 
 .cards{
@@ -268,18 +272,26 @@ a{
 	background-color: black;
 }
 
+	/* Modal */
+
 .image-block img{
 	width: 100%;
 }
 
-ul {
-	list-style-type: none; 
-	padding: 0; 
-	margin: 0; 
+.blocks {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+	gap: var(--size-1); 
+	padding: var(--size-1);
+}
+
+.block-title{
+	color: var(--color-light);
+	padding-top: var(--size-1);
 }
 
 li{
-	width: 450px;
+	width: 300px;
 }
 
 .image-block{
@@ -296,6 +308,7 @@ li{
 
 .pdf-description{
 	color: var(--color-light);
+	font-family: var();
 }
 
 	/* Ending Statement */
@@ -370,13 +383,13 @@ li{
 		/* Cards */
 
 	.card-grid{
-	margin-left: var(--size-1);
-	margin-right: var(--size-1);
+		margin-left: var(--size-1);
+		margin-right: var(--size-1);
 	}
 	
 	.cards{
-	grid-template-columns: repeat(6, 1fr);
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	}
 
 	.block svg {

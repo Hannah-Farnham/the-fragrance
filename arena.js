@@ -54,6 +54,7 @@ let renderBlock = (block) => {
 			`
 			<li class="image-block">
 				<img src="${block.image.original.url}">
+				<h3 class="block-title">${block.title}</h3>
 			</li>
 			`
 
@@ -85,7 +86,6 @@ let renderBlock = (block) => {
 			let videoItem =
 				`
 				<li class="video-block>
-					<p><em>Video</em></p>
 					<video controls src="${ block.attachment.url }"></video>
 				</li>
 				`
@@ -104,7 +104,7 @@ let renderBlock = (block) => {
 				<li>
 					<figure class="pdf-block">
 						<img src="${ block.image.thumb.url }">
-						<figcaption class="pdf-description fira">${ block.title }</figcaption>
+						<h3 class="block-title">${ block.title }</h3>
 					</figure>
 				<li>
 				`

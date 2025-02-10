@@ -10,7 +10,6 @@ document.head.appendChild(markdownIt)
 let channelSlug = 'the-fragrance' // The “slug” is just the end of the URL
 
 
-
 // First, let’s lay out some *functions*, starting with our basic metadata:
 let placeChannelInfo = (data) => {
 	// Target some elements in your HTML:
@@ -33,8 +32,10 @@ let renderBlock = (block) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
 	let channelBlocks = document.getElementById('channel-blocks')
 
+	console.log("is this working")
 	// Links!
-	if (block.id == 'Link') {
+	if (block.class == 'Link') {
+		
 		let linkItem =
 			`
 			<li>
@@ -49,20 +50,32 @@ let renderBlock = (block) => {
 				<p><a href="${ block.source.url }">See the original ↗</a></p>
 			</li>
 			`
+			console.log ("block",block)
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
 	}
 
 	// Images!
 	else if (block.id == 'image-block') {
+
+		let imageItem =
+			`
+			<li class="image-block">
+				<img src="${block.image.original.url}">
+				<p> ${block.image.title}
+			</li>
+			`
+
+		channelBlocks.insertAdjacentHTML('beforeend', imageItem)
+
 			}
 
 	// Text!
-	else if (block.class == 'Text') {
+	else if (block.id == 'Text') {
 		// …up to you!
 	}
 
 	// Uploaded (not linked) media…
-	else if (block.class == 'Attachment') {
+	else if (block.id == 'Attachment') {
 		let attachment = block.attachment.content_type // Save us some repetition
 
 		// Uploaded videos!
@@ -70,7 +83,7 @@ let renderBlock = (block) => {
 			// …still up to you, but we’ll give you the `video` element:
 			let videoItem =
 				`
-				<li>
+				<li class="video-block>
 					<p><em>Video</em></p>
 					<video controls src="${ block.attachment.url }"></video>
 				</li>
@@ -101,7 +114,7 @@ let renderBlock = (block) => {
 	}
 
 	// Linked media…
-	else if (block.class == 'Media') {
+	else if (block.id == 'Media') {
 		let embed = block.embed.type
 
 		// Linked video!
@@ -127,17 +140,17 @@ let renderBlock = (block) => {
 
 
 // It‘s always good to credit your work:
-let renderUser = (user, container) => { // You can have multiple arguments for a function!
-	let userAddress =
-		`
-		<address>
-			<img src="${ user.avatar_image.display }">
-			<h3>${ user.first_name }</h3>
-			<p><a href="https://are.na/${ user.slug }">Are.na profile ↗</a></p>
-		</address>
-		`
-	container.insertAdjacentHTML('beforeend', userAddress)
-}
+// let renderUser = (user, container) => { // You can have multiple arguments for a function!
+// 	let userAddress =
+// 		`
+// 		<address>
+// 			<img src="${ user.avatar_image.display }">
+// 			<h3>${ user.first_name }</h3>
+// 			<p><a href="https://are.na/${ user.slug }">Are.na profile ↗</a></p>
+// 		</address>
+// 		`
+// 	container.insertAdjacentHTML('beforeend', userAddress)
+// }
 
 
 
@@ -145,7 +158,7 @@ let renderUser = (user, container) => { // You can have multiple arguments for a
 fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-store' })
 	.then((response) => response.json()) // Return it as JSON data
 	.then((data) => { // Do stuff with the data
-		console.log(data) // Always good to check your response!
+		console.log("data", data) // Always good to check your response!
 		placeChannelInfo(data) // Pass the data to the first function
 
 		// Loop through the `contents` array (list), backwards. Are.na returns them in reverse!
@@ -155,7 +168,7 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		})
 
 		// Also display the owner and collaborators:
-		let channelUsers = document.getElementById('channel-users') // Show them together
-		data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
-		renderUser(data.user, channelUsers)
+		// let channelUsers = document.getElementById('channel-users') // Show them together
+		// data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
+		// renderUser(data.user, channelUsers)
 	})

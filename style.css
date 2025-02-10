@@ -268,17 +268,18 @@ a{
 	background-color: black;
 }
 
-#image-block{
-
-	align-items: center;
-	img{
-		/* width: 125px;
-		height: 125px; */
-	}
+img{
+	width: 160px;
 }
 
-#text-block{
+li{
+	width: 160px;
+}
 
+ul {
+	list-style-type: none; 
+	padding: 0; 
+	margin: 0; 
 }
 
 	/* Ending Statement */
@@ -366,13 +367,6 @@ a{
 		width: 200px;
 		height: 200px;
 	  }
-
-	#image-block{
-	
-		img{
-
-		}
-	}
 
 		/* Ending Statement */
 

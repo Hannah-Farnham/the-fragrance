@@ -13,6 +13,7 @@ let channelSlug = 'the-fragrance' // The “slug” is just the end of the URL
 // First, let’s lay out some *functions*, starting with our basic metadata:
 let placeChannelInfo = (data) => {
 	// Target some elements in your HTML:
+	console.log("block", data.contents[11]);
 	let channelTitle = document.getElementById('channel-title')
 	// let channelDescription = document.getElementById('channel-description')
 	// let channelCount = document.getElementById('channel-count')
@@ -32,6 +33,7 @@ let renderBlock = (block) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
 	let channelBlocks = document.getElementById('channel-blocks')
 
+
 	
 	// Links!
 	if (block.class == 'Link') {
@@ -39,7 +41,8 @@ let renderBlock = (block) => {
 		let linkItem =
 		`
 		<li>
-		<img src="${block.image.original.url}">
+			<img src="${block.image.original.url}">
+			<h3 class="block-title">${block.title}</h3>
 		</li>
 		`
 		
@@ -88,6 +91,7 @@ let renderBlock = (block) => {
 				<li class="video-block>
 					<video controls src="${ block.attachment.url }"></video>
 				</li>
+				<h3 class="block-title">${block.title}</h3>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', videoItem)
 			// More on video, like the `autoplay` attribute:

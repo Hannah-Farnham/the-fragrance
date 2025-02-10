@@ -72,6 +72,7 @@ let renderBlock = (block) => {
 			`
 			<li class="text-block">
 				<p>${block.content}</p>
+				<h3 class="block-title">${block.title}</h3>
 			</li>
 			`
 
@@ -129,6 +130,7 @@ let renderBlock = (block) => {
 				`
 				<li>
 					${ block.embed.html }
+					<h3 class="block-title">${block.title}</h3>
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)

@@ -307,11 +307,6 @@ a{
 	flex-grow: 1;
 }
 
-.image-block{
-	width: 250px;
-	flex-grow: 1;
-}
-
 .link{
 	color: var(--color-light)
 }

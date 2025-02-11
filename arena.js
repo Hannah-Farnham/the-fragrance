@@ -117,6 +117,20 @@ let renderBlock = (block) => {
 
 		}
 
+		// Uploaded audio!
+		else if (attachment.includes('audio')) {
+			let audioItem =
+				`
+				<li class="audio-block">
+					<audio controls src="${block.attachment.url}"></audio>
+					<h3 class="block-title">${ block.title }</h3>
+				</li>
+				`
+			channelBlocks.insertAdjacentHTML('beforeend', audioItem)
+			// More on audio: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
+
+		}
+
 	}
 
 	// Linked media…

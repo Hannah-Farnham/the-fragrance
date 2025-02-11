@@ -238,7 +238,7 @@ a{
 	margin-right: 1px;
 }
 
-	/* Cards */
+	/* Cards with Perfume Bottles */
 
 .card-grid{
 	margin: 0 auto;
@@ -256,7 +256,7 @@ a{
 	margin: 0 auto;
 }
 
-.block{
+.card{
 	aspect-ratio: 1 /1 ;
 	display: flex;
 	align-items: center;
@@ -264,16 +264,16 @@ a{
 	border: var(--color-light) solid 1px;
 }
 
-.block svg {
+.card svg {
 	width: 135px;
 	height: 135px;
   }
 
-.block:hover{
+.card:hover{
 	background-color: black;
 }
 
-	/* Modal */
+	/* Modal w/ Are.na Blocks */
 
 .blocks {
 	display: grid;
@@ -390,7 +390,7 @@ a{
 		font-size: var(--size-1);
 	}
 
-		/* Cards */
+		/* Cards with Perfume Bottles */
 
 	.card-grid{
 		margin-left: var(--size-1);
@@ -402,7 +402,7 @@ a{
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	}
 
-	.block svg {
+	.card svg {
 		width: 200px;
 		height: 200px;
 	  }

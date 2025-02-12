@@ -54,6 +54,8 @@ body{
 	background-attachment: fixed; /* https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment */
 }
 
+/* Make a div, put the image in there, fix position - lowest z-index */
+
 .background-image{
 	height: 100vh;
 	object-fit: cover;

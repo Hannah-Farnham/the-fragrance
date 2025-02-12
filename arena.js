@@ -110,7 +110,7 @@ let renderBlock = (block) => {
 						<img src="${ block.image.thumb.url }">
 						<h3 class="block-title">${ block.title }</h3>
 					</figure>
-				<li>
+				</li>
 				`
 
 		channelBlocks.insertAdjacentHTML('beforeend', PdfItem)	

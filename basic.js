@@ -10,3 +10,5 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	});
 });
+
+// reference: https://www.shecodes.io/athena/15247-how-to-change-the-src-in-img-after-clicking-button-with-addeventlistener

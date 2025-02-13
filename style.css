@@ -255,6 +255,7 @@ p{
 
 .top-nav button:hover{
 	cursor: crosshair; 
+	cursor: url('links/Favicon.png'), auto;;
 }
 
 .top-nav button:hover::before {

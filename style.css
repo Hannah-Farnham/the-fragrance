@@ -47,25 +47,20 @@
 
 body{
 	background-color: var(--color-dark);
-	background-image: url('links/Leaves\ Dark.png'); 
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed; /* https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment */
 }
 
 /* Make a div, put the image in there, fix position - lowest z-index */
 
 .background-image{
-	height: 100vh;
 	object-fit: cover;
-	position: absolute;
-	z-index: -1;
+	position: fixed;
+	z-index: -1000;
+	width: 100vw;
 }
 
 header{
 	padding-top: var(--size-1);
-	padding-bottom: var(--size-4);
+	padding-bottom: var(--size-1);
 }
 
 	/* Fonts */
@@ -74,20 +69,15 @@ h1{
 	color: var(--color-light);
 	font-family: var(--font-2);
 	text-transform: uppercase;
-	font-size: 11vw;
+	font-size: 12vw;
 	text-align: center;
-	line-height: 30%;
 }
 
 #channel-title{
 	margin: 0;
 	padding-bottom: var(--size-2);
-	line-height: 70%;
+	line-height: 80%;
 	overflow-y: hidden;
-
-}
-#channel-title h1{
-	line-height: 70%;
 
 }
 
@@ -452,20 +442,20 @@ a{
 		/* Nav */
 
 	.top-nav{
-		padding-bottom: var(--size-5);
+		padding-bottom: var(--size-2);
 	}
 
 		/* Header */
 
 	#channel-title{
-		line-height: 70%;
-		padding-bottom: var(--size-4);
+		line-height: 80%;
+		padding-bottom: var(--size-2);
 	}
 
 	#fragrance-description{
 		max-width: 1200px;
 		margin: 0 auto;
-		padding-bottom: var(--size-4);
+		padding-bottom: var(--size-2);
 	}	
 
 		/* Ending Statement */

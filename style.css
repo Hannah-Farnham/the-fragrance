@@ -23,13 +23,13 @@
 	--color-spicy: #EC522C;
 	--color-floral: #FA87D4;
 	--color-musk: #866246;
-	--color-fruity: #6A4C9C;
+	--color-fruity: #EA2C2F;
 	--color-citrus: #ECB92C;
 	--color-woody: #63361A;
 	--color-green: #53A76B;
 	--color-ozonic: #83D8EF;
 	--color-herbal: #80a750;
-	--color-resinous: #EA2C2F;
+	--color-resinous: #ff9d09;
 	--color-smoky: #A99D9A;
 	--color-earthy: #6c5f1f;
 
@@ -212,7 +212,7 @@ p{
 }
 
 .nav-item:nth-child(4)::before {
-	background: #6A4C9C80;
+	background: #EA2C2F80;
 }
 
 .nav-item:nth-child(5)::before {
@@ -236,7 +236,7 @@ p{
 }
 
 .nav-item:nth-child(10)::before {
-	background: #EA2C2F80;
+	background: #ff9d0980;
 }
 
 .nav-item:nth-child(11)::before {

@@ -28,10 +28,10 @@
 	--color-woody: #63361A;
 	--color-green: #53A76B;
 	--color-ozonic: #83D8EF;
-	--color-herbal: #166232;
+	--color-herbal: #80a750;
 	--color-resinous: #EA2C2F;
 	--color-smoky: #A99D9A;
-	--color-earthy: #ABBE6F;
+	--color-earthy: #6c5f1f;
 
 	/* Fonts */
 
@@ -52,10 +52,14 @@ body{
 #background-image img{
 	position: fixed;
 	z-index: -1000;
-	width: 100%;
-	height: 100%;
 	object-fit: cover;
 	object-position: center;
+	width: 100vw;
+	height: 100vh;
+	max-block-size: 100%;
+	max-inline-size: 100%;
+	left: 0;
+	top: 0;
 }
 
 header{
@@ -177,6 +181,70 @@ p{
 	color: var(--color-light);
 	text-decoration: none;
 	min-width: 100px;
+    transition: color 0.3s ease-in-out; /* Optional: for smooth text color change */
+}
+
+.nav-item::before {
+	content: ""; /* This is causing the site to be too wide */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 120%;
+	height: 120%;
+	transform: translate(-50%, -50%);
+	filter: blur(15px);
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	border-radius: 20px;
+	z-index: -1;
+}
+
+.nav-item:first-child::before {
+	background: #EC522C80;
+}
+
+.nav-item:nth-child(2)::before {
+	background: #FA87D480;
+}
+
+.nav-item:nth-child(3)::before {
+	background: #86624680;
+}
+
+.nav-item:nth-child(4)::before {
+	background: #6A4C9C80;
+}
+
+.nav-item:nth-child(5)::before {
+	background: #ECB92C80;
+}
+
+.nav-item:nth-child(6)::before {
+	background: #63361A80;
+}
+
+.nav-item:nth-child(7)::before {
+	background: #16623280;
+}
+
+.nav-item:nth-child(8)::before {
+	background: #83D8EF80;
+}
+
+.nav-item:nth-child(9)::before {
+	background: #80a75080;
+}
+
+.nav-item:nth-child(10)::before {
+	background: #EA2C2F80;
+}
+
+.nav-item:nth-child(11)::before {
+	background: #A99D9A80;
+}
+
+.nav-item:nth-child(12)::before {
+	background: #6c5f1f80;
 }
 
 .circle {
@@ -185,54 +253,12 @@ p{
 	padding-top: 4px;
 }
 
-.top-nav button:first-child:hover {
-	background-color: var(--color-spicy);
-	transition: fill 1s ease;
+.top-nav button:hover{
 	cursor: crosshair; 
 }
 
-.top-nav button:nth-child(2):hover {
-	background-color: var(--color-floral);
-}
-
-.top-nav button:nth-child(3):hover {
-	background-color: var(--color-musk);
-}
-
-.top-nav button:nth-child(4):hover {
-	background-color: var(--color-fruity);
-}
-
-.top-nav button:nth-child(5):hover {
-	background-color: var(--color-citrus);
-}
-
-.top-nav button:nth-child(6):hover {
-	background-color: var(--color-woody);
-}
-
-.top-nav button:nth-child(7):hover {
-	background-color: var(--color-green);
-}
-
-.top-nav button:nth-child(8):hover {
-	background-color: var(--color-ozonic);
-}
-
-.top-nav button:nth-child(9):hover {
-	background-color: var(--color-herbal);
-}
-
-.top-nav button:nth-child(10):hover {
-	background-color: var(--color-resinous);
-}
-
-.top-nav button:nth-child(11):hover {
-	background-color: var(--color-smoky);
-}
-
-.top-nav button:nth-child(12):hover {
-	background-color: var(--color-earthy);
+.top-nav button:hover::before {
+	opacity: 1;
 }
 
 .top-nav button:last-child {

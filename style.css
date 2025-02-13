@@ -64,7 +64,7 @@ body{
 
 header{
 	padding-top: var(--size-1);
-	padding-bottom: var(--size-1);
+	padding-bottom: var(--size-2);
 }
 
 	/* Fonts */

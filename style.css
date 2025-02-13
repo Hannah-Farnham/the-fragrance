@@ -49,7 +49,7 @@ body{
 	background-color: var(--color-dark);
 }
 
-.background-image img{
+#background-image img{
 	position: fixed;
 	z-index: -1000;
 	width: 100%;
@@ -168,7 +168,7 @@ p{
 	z-index: 600;
 }
 
-a{
+.nav-item{
 	font-family: var(--font-1);
 	font-size: calc(var(--size-1)*.8);
 	font-weight: 100;
@@ -185,56 +185,57 @@ a{
 	padding-top: 4px;
 }
 
-.top-nav a:first-child:Hover {
+.top-nav button:first-child:hover {
 	background-color: var(--color-spicy);
 	transition: fill 1s ease;
+	cursor: crosshair; 
 }
 
-.top-nav a:nth-child(2):Hover {
+.top-nav button:nth-child(2):hover {
 	background-color: var(--color-floral);
 }
 
-.top-nav a:nth-child(3):Hover {
+.top-nav button:nth-child(3):hover {
 	background-color: var(--color-musk);
 }
 
-.top-nav a:nth-child(4):Hover {
+.top-nav button:nth-child(4):hover {
 	background-color: var(--color-fruity);
 }
 
-.top-nav a:nth-child(5):Hover {
+.top-nav button:nth-child(5):hover {
 	background-color: var(--color-citrus);
 }
 
-.top-nav a:nth-child(6):Hover {
+.top-nav button:nth-child(6):hover {
 	background-color: var(--color-woody);
 }
 
-.top-nav a:nth-child(7):Hover {
+.top-nav button:nth-child(7):hover {
 	background-color: var(--color-green);
 }
 
-.top-nav a:nth-child(8):Hover {
+.top-nav button:nth-child(8):hover {
 	background-color: var(--color-ozonic);
 }
 
-.top-nav a:nth-child(9):Hover {
+.top-nav button:nth-child(9):hover {
 	background-color: var(--color-herbal);
 }
 
-.top-nav a:nth-child(10):Hover {
+.top-nav button:nth-child(10):hover {
 	background-color: var(--color-resinous);
 }
 
-.top-nav a:nth-child(11):Hover {
+.top-nav button:nth-child(11):hover {
 	background-color: var(--color-smoky);
 }
 
-.top-nav a:nth-child(12):Hover {
+.top-nav button:nth-child(12):hover {
 	background-color: var(--color-earthy);
 }
 
-.top-nav a:last-child {
+.top-nav button:last-child {
 	margin-right: 1px;
 }
 
@@ -391,7 +392,7 @@ a{
 
 		/* Nav */
 
-	a{
+	.nav-item{
 		font-size: var(--size-1);
 	}
 

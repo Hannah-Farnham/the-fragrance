@@ -49,8 +49,6 @@ body{
 	background-color: var(--color-dark);
 }
 
-/* Make a div, put the image in there, fix position - lowest z-index */
-
 .background-image img{
 	position: fixed;
 	z-index: -1000;

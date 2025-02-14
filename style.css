@@ -169,7 +169,6 @@ p{
 	white-space: nowrap; 
 	scrollbar-width: none; 
 	z-index: 600;
-	overflow: hidden;
 }
 
 .nav-item{
@@ -200,12 +199,6 @@ p{
 }
 
 /* reference: https://stackoverflow.com/questions/8874326/how-to-make-a-hover-effect-for-pseudo-elements? */
-
-
-.top-nav button:hover{
-	cursor: crosshair; 
-	cursor: url('links/Favicon.png'), auto;
-}
 
 .nav-item:first-child::before {
 	background: #EC522C80;
@@ -276,23 +269,43 @@ p{
 
 .top-nav button:nth-child(8):hover{
 	cursor: crosshair; 
-	cursor: url('links/cursors/Ozonic.png'), auto;
+	cursor: url('links/cursors/Ozonic.svg'), auto;
 }
 
 .nav-item:nth-child(9)::before {
 	background: #80a75080;
 }
 
+.top-nav button:nth-child(9):hover{
+	cursor: crosshair; 
+	cursor: url('links/cursors/Herbal.svg'), auto;
+}
+
 .nav-item:nth-child(10)::before {
 	background: #ff9d0980;
+}
+
+.top-nav button:nth-child(10):hover{
+	cursor: crosshair; 
+	cursor: url('links/cursors/Resinous.svg'), auto;
 }
 
 .nav-item:nth-child(11)::before {
 	background: #A99D9A80;
 }
 
+.top-nav button:nth-child(11):hover{
+	cursor: crosshair; 
+	cursor: url('links/cursors/Smoky.svg'), auto;
+}
+
 .nav-item:nth-child(12)::before {
 	background: #6c5f1f80;
+}
+
+.top-nav button:nth-child(12):hover{
+	cursor: crosshair; 
+	cursor: url('links/cursors/Earthy.svg'), auto;
 }
 
 .circle {

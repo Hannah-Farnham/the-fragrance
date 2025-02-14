@@ -201,36 +201,82 @@ p{
 
 /* reference: https://stackoverflow.com/questions/8874326/how-to-make-a-hover-effect-for-pseudo-elements? */
 
+
+.top-nav button:hover{
+	cursor: crosshair; 
+	cursor: url('links/Favicon.png'), auto;
+}
+
 .nav-item:first-child::before {
 	background: #EC522C80;
+}
+
+.top-nav button:first-child:hover{
+	cursor: crosshair; 
+	cursor: url('links/cursors/Spicy.svg'), auto;
 }
 
 .nav-item:nth-child(2)::before {
 	background: #FA87D480;
 }
 
+.top-nav button:nth-child(2):hover{
+	cursor: crosshair; 
+	cursor: url('links/cursors/Floral.svg'), auto;
+}
+
 .nav-item:nth-child(3)::before {
 	background: #86624680;
+}
+
+.top-nav button:nth-child(3):hover{
+	cursor: crosshair; 
+	cursor: url('links/cursors/Musk.svg'), auto;
 }
 
 .nav-item:nth-child(4)::before {
 	background: #EA2C2F80;
 }
 
+.top-nav button:nth-child(4):hover{
+	cursor: crosshair; 
+	cursor: url('links/cursors/Fruity.svg'), auto;
+}
+
 .nav-item:nth-child(5)::before {
 	background: #ECB92C80;
+}
+
+.top-nav button:nth-child(5):hover{
+	cursor: crosshair; 
+	cursor: url('links/cursors/Citrus.svg'), auto;
 }
 
 .nav-item:nth-child(6)::before {
 	background: #63361A80;
 }
 
+.top-nav button:nth-child(6):hover{
+	cursor: crosshair; 
+	cursor: url('links/cursors/Woody.svg'), auto;
+}
+
 .nav-item:nth-child(7)::before {
 	background: #16623280;
 }
 
+.top-nav button:nth-child(7):hover{
+	cursor: crosshair; 
+	cursor: url('links/cursors/Green.svg'), auto;
+}
+
 .nav-item:nth-child(8)::before {
 	background: #83D8EF80;
+}
+
+.top-nav button:nth-child(8):hover{
+	cursor: crosshair; 
+	cursor: url('links/cursors/Ozonic.png'), auto;
 }
 
 .nav-item:nth-child(9)::before {
@@ -253,11 +299,6 @@ p{
 	width: 20px;
 	padding-right: calc(var(--size-1)*.5);
 	padding-top: 4px;
-}
-
-.top-nav button:hover{
-	cursor: crosshair; 
-	cursor: url('links/Favicon.png'), auto;
 }
 
 .top-nav button:hover::before {

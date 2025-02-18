@@ -339,67 +339,6 @@ p{
 	background-color: black;
 }
 
-.container{
-	margin: 0 auto;
-	margin-left: var(--size-1);
-	margin-right: var(--size-1);
-}
-
-/* .cards{
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-	grid-auto-rows: 1fr;
-	border: var(--color-light) solid 1px;
-	box-sizing: border-box;
-	height: fit-content;
-	margin: 0 auto;
-}
-
-.card{
-	aspect-ratio: 1 /1 ;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: var(--color-light) solid 1px;
-}
-
-.card svg {
-	width: 135px;
-	height: 135px;
-  }
-
-.card:hover{
-	background-color: black;
-} */
-
-	/* Are.na Blocks */
-
-/* .blocks {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-	gap: var(--size-1); 
-	padding: var(--size-1);
-	place-content: center; 
-	justify-content: center;
-}
-
-.blocks li{
-	max-width: 350px;
-	padding: var(--size-1);
-	border: 1px var(--color-light) solid;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	background-color: var(--color-dark);
-	width: 100%;
-	height: 100%;
-	mix-blend-mode: luminosity;
-	filter: grayscale(1) contrast(1.2) brightness(1.02);
-	img{
-		border: 1px var(--color-light) solid;
-	}
-} */
-
 .block-title{
 	color: var(--color-light);
 	padding-top: var(--size-1);
@@ -534,17 +473,17 @@ button{
 
 		/* Cards with Perfume Bottles */
 
-	.card-grid{
+	.container{
 		margin-left: var(--size-1);
 		margin-right: var(--size-1);
 	}
 	
-	.cards{
+	.blocks{
 		grid-template-columns: repeat(6, 1fr);
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	}
 
-	.card svg {
+	.blocks li svg {
 		width: 200px;
 		height: 200px;
 	  }

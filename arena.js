@@ -60,12 +60,10 @@ let renderBlock = (block) => {
 				<img src="${block.image.original.url}">
 				<h3 class="block-title">${block.title}</h3>
 			</button>
-			<dialog class="modal-background">
-				<div class="modal">
-					<button class="exit">Close it</button>
+			<dialog class="modal">
+					<button class="exit">×</button>
 					<img src="${block.image.large.url}">
 					<h3 class="block-title">${block.title}</h3>
-				</div>
 			</dialog>
 			</li>
 			`
@@ -191,6 +189,12 @@ let initInteraction = () => {
 
 		closeButton.onclick = () => {
 			dialog.close()
+		}
+
+		dialog.onclick = (event) => {
+			if (event.target == dialog) {
+				dialog.close()
+			}
 		}
 	})
 }

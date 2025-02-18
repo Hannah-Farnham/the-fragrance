@@ -334,7 +334,6 @@ let initInteraction = () => {
 		}
 	})
 
-	// …None of these are opening
 
 	let  attachmentBlocks = document.querySelectorAll('.attachment-block')
 	attachmentBlocks.forEach((block) => {
@@ -343,7 +342,8 @@ let initInteraction = () => {
 		let closeButton = dialog.querySelector('button')
 
 		openButton.onclick = () => {
-			dialog.showModal()
+			dialog.showModal();
+
 		}
 
 		closeButton.onclick = () => {
@@ -358,6 +358,7 @@ let initInteraction = () => {
 	})
 
 	let  pdfBlocks = document.querySelectorAll('.pdf-block')
+
 	pdfBlocks.forEach((block) => {
 		let openButton = block.querySelector('button')
 		let dialog = block.querySelector('dialog')
@@ -378,14 +379,18 @@ let initInteraction = () => {
 		}
 	})
 
+	// …None of these are opening
+
 	let  audioBlocks = document.querySelectorAll('.audio-block')
 	audioBlocks.forEach((block) => {
 		let openButton = block.querySelector('button')
 		let dialog = block.querySelector('dialog')
 		let closeButton = dialog.querySelector('button')
 
+
 		openButton.onclick = () => {
-			dialog.showModal()
+			dialog.showModal();
+
 		}
 
 		closeButton.onclick = () => {
@@ -400,6 +405,7 @@ let initInteraction = () => {
 	})
 
 	let  mediaBlocks = document.querySelectorAll('.media-block')
+
 	mediaBlocks.forEach((block) => {
 		let openButton = block.querySelector('button')
 		let dialog = block.querySelector('dialog')

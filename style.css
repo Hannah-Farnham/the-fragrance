@@ -387,6 +387,7 @@ p{
 	height: fit-content;
 	max-width: 375px;
 	max-height: 90vh;
+	text-align: center;
 	img{
 		max-width: 60%; 
 		object-fit: contain;

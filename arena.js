@@ -40,9 +40,15 @@ let renderBlock = (block) => {
 		
 		let linkItem =
 		`
-		<li>
-			<img src="${block.image.original.url}">
-			<h3 class="block-title">${block.title}</h3>
+		<li class="link-block">
+			<button>
+				<h2>click here</h2>
+			</button>
+			<dialog class="modal">
+				<button class="exit">×</button>
+				<img src="${block.image.original.url}">
+				<h3 class="block-title">${block.title}</h3>
+			</dialog>
 		</li>
 		`
 		
@@ -57,8 +63,21 @@ let renderBlock = (block) => {
 			`
 			<li class="image-block">
 			<button>
-				<img src="${block.image.original.url}">
-				<h3 class="block-title">${block.title}</h3>
+				<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98.99 203.94">
+						<defs>
+						  <style>
+							.cls-1 {
+							  fill: none;
+							  stroke: #fff;
+							  stroke-miterlimit: 10;
+							  stroke-width: 2px;
+							}
+						  </style>
+						</defs>
+						<g id="Layer_1-2" data-name="Layer_1">
+						  <path class="cls-1" d="M31.41,86.86l4.6-7.26h-1.65c-1.51,0-2.73-1.22-2.73-2.72V3.23c0-1.51,1.22-2.73,2.73-2.73h30.28c1.5,0,2.72,1.22,2.72,2.73v73.65c0,1.5-1.22,2.72-2.72,2.72h-1.67l5.04,7.27h.45s22.99.62,22.99.62c0,0,7.91-.48,6.96,8.39-.95,8.86-13.97,76.28-13.97,76.28,0,0-.64,1.99-.75,10.38-.11,8.4,0,14.3,0,14.3,0,0,.33,2.61-3.33,3.57-3.67.96-13.52,3.03-30.86,3.03s-27.2-2.07-30.86-3.03c-3.67-.96-3.33-3.57-3.33-3.57,0,0,.1-5.9,0-14.3-.11-8.39-.76-10.38-.76-10.38,0,0-13.02-67.42-13.97-76.28-.95-8.87,6.97-8.39,6.97-8.39l23.86-.63Z"/>
+						</g>
+				</svg>
 			</button>
 			<dialog class="modal">
 					<button class="exit">×</button>
@@ -78,8 +97,14 @@ let renderBlock = (block) => {
 		let textItem =
 			`
 			<li class="text-block">
+			<button>
+				<h2>click here</h2>
+			</button>
+			<dialog class="modal">
+				<button class="exit">×</button>
 				<p>${block.content}</p>
 				<h3 class="block-title">${block.title}</h3>
+			</dialog>
 			</li>
 			`
 
@@ -95,10 +120,16 @@ let renderBlock = (block) => {
 			// …still up to you, but we’ll give you the `video` element:
 			let videoItem =
 				`
-				<li class="video-block>
-					<video controls src="${ block.attachment.url }"></video>
+				<li class="attachment-block">
+					<button>
+						<h2>click here</h2>
+					</button>
+					<dialog class="modal">
+						<button class="exit">×</button>
+						<video controls src="${ block.attachment.url }"></video>
+						<h3 class="block-title">${block.title}</h3>
+					</dialog>
 				</li>
-				<h3 class="block-title">${block.title}</h3>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', videoItem)
 			// More on video, like the `autoplay` attribute:
@@ -112,11 +143,17 @@ let renderBlock = (block) => {
 
 			let PdfItem =
 				`
-				<li>
-					<figure class="pdf-block">
-						<img src="${ block.image.thumb.url }">
-						<h3 class="block-title">${ block.title }</h3>
-					</figure>
+				<li class="pdf-block">
+					<button>
+						<h2>click here</h2>
+					</button>
+					<dialog class="modal">
+						<button class="exit">×</button>
+						<figure class="pdf-block">
+							<img src="${ block.image.thumb.url }">
+							<h3 class="block-title">${ block.title }</h3>
+						</figure>
+					<dialog>
 				</li>
 				`
 
@@ -129,8 +166,15 @@ let renderBlock = (block) => {
 			let audioItem =
 				`
 				<li class="audio-block">
-					<audio controls src="${block.attachment.url}"></audio>
-					<h3 class="block-title">${ block.title }</h3>
+					<button>
+						<h2>click here</h2>
+					</button>
+					<dialog class="modal">
+						<h3>HELLO</h3>
+						<button class="exit">×</button>
+						<audio controls src="${block.attachment.url}"></audio>
+						<h3 class="block-title">${ block.title }</h3>
+					</dialog>
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', audioItem)
@@ -149,9 +193,15 @@ let renderBlock = (block) => {
 			// …still up to you, but here’s an example `iframe` element:
 			let linkedVideoItem =
 				`
-				<li>
+				<li class="media-block">
+				<button>
+					<h2>click here</h2>
+				</button>
+				<dialog class="modal">
+					<button class="exit">×</button>
 					${ block.embed.html }
 					<h3 class="block-title">${block.title}</h3>
+				</dialog>
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem)
@@ -177,8 +227,136 @@ let renderBlock = (block) => {
 // }
 
 let initInteraction = () => {
+	let  linkBlocks = document.querySelectorAll('.link-block')
+	linkBlocks.forEach((block) => {
+		let openButton = block.querySelector('button')
+		let dialog = block.querySelector('dialog')
+		let closeButton = dialog.querySelector('button')
+
+		openButton.onclick = () => {
+			dialog.showModal()
+		}
+
+		closeButton.onclick = () => {
+			dialog.close()
+		}
+
+		dialog.onclick = (event) => {
+			if (event.target == dialog) {
+				dialog.close()
+			}
+		}
+	})
+
 	let  imageBlocks = document.querySelectorAll('.image-block')
 	imageBlocks.forEach((block) => {
+		let openButton = block.querySelector('button')
+		let dialog = block.querySelector('dialog')
+		let closeButton = dialog.querySelector('button')
+
+		openButton.onclick = () => {
+			dialog.showModal()
+		}
+
+		closeButton.onclick = () => {
+			dialog.close()
+		}
+
+		dialog.onclick = (event) => {
+			if (event.target == dialog) {
+				dialog.close()
+			}
+		}
+	})
+
+	let  textBlocks = document.querySelectorAll('.text-block')
+	textBlocks.forEach((block) => {
+		let openButton = block.querySelector('button')
+		let dialog = block.querySelector('dialog')
+		let closeButton = dialog.querySelector('button')
+
+		openButton.onclick = () => {
+			dialog.showModal()
+		}
+
+		closeButton.onclick = () => {
+			dialog.close()
+		}
+
+		dialog.onclick = (event) => {
+			if (event.target == dialog) {
+				dialog.close()
+			}
+		}
+	})
+
+	// …None of these are opening
+
+	let  attachmentBlocks = document.querySelectorAll('.attachment-block')
+	attachmentBlocks.forEach((block) => {
+		let openButton = block.querySelector('button')
+		let dialog = block.querySelector('dialog')
+		let closeButton = dialog.querySelector('button')
+
+		openButton.onclick = () => {
+			dialog.showModal()
+		}
+
+		closeButton.onclick = () => {
+			dialog.close()
+		}
+
+		dialog.onclick = (event) => {
+			if (event.target == dialog) {
+				dialog.close()
+			}
+		}
+	})
+
+	let  pdfBlocks = document.querySelectorAll('.pdf-block')
+	pdfBlocks.forEach((block) => {
+		let openButton = block.querySelector('button')
+		let dialog = block.querySelector('dialog')
+		let closeButton = dialog.querySelector('button')
+
+		openButton.onclick = () => {
+			dialog.showModal()
+		}
+
+		closeButton.onclick = () => {
+			dialog.close()
+		}
+
+		dialog.onclick = (event) => {
+			if (event.target == dialog) {
+				dialog.close()
+			}
+		}
+	})
+
+	let  audioBlocks = document.querySelectorAll('.audio-block')
+	audioBlocks.forEach((block) => {
+		let openButton = block.querySelector('button')
+		let dialog = block.querySelector('dialog')
+		let closeButton = dialog.querySelector('button')
+
+		openButton.onclick = () => {
+			dialog.showModal()
+		}
+
+		closeButton.onclick = () => {
+			dialog.close()
+		}
+
+		dialog.onclick = (event) => {
+			if (event.target == dialog) {
+				dialog.close()
+			}
+		}
+	})
+
+	let  mediaBlocks = document.querySelectorAll('.media-block')
+	mediaBlocks.forEach((block) => {
 		let openButton = block.querySelector('button')
 		let dialog = block.querySelector('dialog')
 		let closeButton = dialog.querySelector('button')

@@ -306,13 +306,46 @@ p{
 
 	/* Cards with Perfume Bottles */
 
-.card-grid{
+.container{
 	margin: 0 auto;
 	margin-left: var(--size-1);
 	margin-right: var(--size-1);
 }
 
-.cards{
+.blocks{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	grid-auto-rows: 1fr;
+	border: var(--color-light) solid 1px;
+	box-sizing: border-box;
+	height: fit-content;
+	margin: 0 auto;
+}
+
+.blocks li{
+	aspect-ratio: 1 /1 ;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: var(--color-light) solid 1px;
+}
+
+.blocks li svg {
+	width: 135px;
+	height: 135px;
+  }
+
+.blocks li:hover{
+	background-color: black;
+}
+
+.container{
+	margin: 0 auto;
+	margin-left: var(--size-1);
+	margin-right: var(--size-1);
+}
+
+/* .cards{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 	grid-auto-rows: 1fr;
@@ -337,11 +370,11 @@ p{
 
 .card:hover{
 	background-color: black;
-}
+} */
 
-	/* Modal w/ Are.na Blocks */
+	/* Are.na Blocks */
 
-.blocks {
+/* .blocks {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
 	gap: var(--size-1); 
@@ -365,7 +398,7 @@ p{
 	img{
 		border: 1px var(--color-light) solid;
 	}
-}
+} */
 
 .block-title{
 	color: var(--color-light);
@@ -381,7 +414,7 @@ p{
 	color: white;
 }
 
-.audio-block audio {
+.modal audio {
 	width: 200px;
 	height: 200px;
 }

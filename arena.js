@@ -97,6 +97,8 @@ let renderBlock = (block) => {
 			<dialog class="modal">
 					<button class="exit">×</button>
 						<h2>${block.title}</h2>
+						<h3>Parfum</h3>
+						<h4>Added By ${block.connected_by_username}</h4>
 						<div class="divider-line"></div>
 						<img src="${block.image.large.url}">
 						<p>${block.description}</p>

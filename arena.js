@@ -56,8 +56,17 @@ let renderBlock = (block) => {
 		let imageItem =
 			`
 			<li class="image-block">
+			<button>
 				<img src="${block.image.original.url}">
 				<h3 class="block-title">${block.title}</h3>
+			</button>
+			<dialog class="modal-background">
+				<div class="modal">
+					<button class="exit">Close it</button>
+					<img src="${block.image.large.url}">
+					<h3 class="block-title">${block.title}</h3>
+				</div>
+			</dialog>
 			</li>
 			`
 
@@ -169,7 +178,22 @@ let renderBlock = (block) => {
 // 	container.insertAdjacentHTML('beforeend', userAddress)
 // }
 
+let initInteraction = () => {
+	let  imageBlocks = document.querySelectorAll('.image-block')
+	imageBlocks.forEach((block) => {
+		let openButton = block.querySelector('button')
+		let dialog = block.querySelector('dialog')
+		let closeButton = dialog.querySelector('button')
 
+		openButton.onclick = () => {
+			dialog.showModal()
+		}
+
+		closeButton.onclick = () => {
+			dialog.close()
+		}
+	})
+}
 
 // Now that we have said what we can do, go get the data:
 fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-store' })
@@ -183,6 +207,8 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 			console.log(block) // The data for a single block
 			renderBlock(block) // Pass the single block data to the render function
 		})
+
+		initInteraction()
 
 		// Also display the owner and collaborators:
 		// let channelUsers = document.getElementById('channel-users') // Show them together

@@ -339,11 +339,44 @@ p{
 	background-color: black;
 }
 
-.block-title{
+	/* Modal  */
+
+.modal{
 	color: var(--color-light);
+	background-color: var(--color-dark);
+	padding: var(--size-2);
+	border: 1px var(--color-light) solid;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+	height: fit-content;
+	max-width: 375px;
+	max-height: 90vh;
+	img{
+		max-width: 60%; 
+		object-fit: contain;
+	}
+}
+
+.modal h2 {
+	padding-bottom: var(--size-1);
 	padding-top: var(--size-1);
 	flex-grow: 1;
+	color: var(--color-light);
+	line-height: 100%;
 }
+
+.modal p {
+	padding-top: var(--size-1);
+}
+
+.divider-line{
+	height: 1px;
+	background-color: var(--color-light);
+	margin: 20px 0;
+} 
 
 .link{
 	color: var(--color-light)
@@ -361,22 +394,6 @@ p{
 .pdf-description{
 	color: var(--color-light);
 	font-family: var();
-}
-
-	/* Modal  */
-
-.modal{
-	color: var(--color-light);
-	background-color: var(--color-dark);
-	padding: var(--size-2);
-	border: 1px var(--color-light) solid;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 1000;
-	height: fit-content;
-	max-width: 375px;
 }
 
 ::backdrop{
@@ -403,12 +420,6 @@ body:has(dialog[open]) {
 	background-color: var(--color-light);
 	color: var(--color-dark);
 }
-
-.divider-line{
-	height: 1px;
-	background-color: var(--color-dark);
-	margin: 20px 0;
-} 
 
 button{
 	cursor: pointer;

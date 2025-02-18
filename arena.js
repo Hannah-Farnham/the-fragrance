@@ -49,6 +49,7 @@ let renderBlock = (block) => {
 							fill: none;
 							stroke: #fff;
 							stroke-miterlimit: 10;
+							stroke-width: 2px;
 						}
 						</style>
 					</defs>
@@ -59,8 +60,9 @@ let renderBlock = (block) => {
 			</button>
 			<dialog class="modal">
 				<button class="exit">×</button>
+				<h2>${block.title}</h2>
 				<img src="${block.image.original.url}">
-				<h3 class="block-title">${block.title}</h3>
+				<p>${block.description}</p>
 			</dialog>
 		</li>
 		`
@@ -83,6 +85,7 @@ let renderBlock = (block) => {
 							fill: none;
 							stroke: #fff;
 							stroke-miterlimit: 10;
+							stroke-width: 2px;
 						}
 						</style>
 					</defs>
@@ -93,8 +96,10 @@ let renderBlock = (block) => {
 			</button>
 			<dialog class="modal">
 					<button class="exit">×</button>
-					<img src="${block.image.large.url}">
-					<h3 class="block-title">${block.title}</h3>
+						<h2>${block.title}</h2>
+						<div class="divider-line"></div>
+						<img src="${block.image.large.url}">
+						<p>${block.description}</p>
 			</dialog>
 			</li>
 			`
@@ -117,6 +122,7 @@ let renderBlock = (block) => {
 							fill: none;
 							stroke: #fff;
 							stroke-miterlimit: 10;
+							stroke-width: 2px;
 						}
 						</style>
 					</defs>
@@ -133,8 +139,10 @@ let renderBlock = (block) => {
 			</button>
 			<dialog class="modal">
 				<button class="exit">×</button>
+				<h2>${block.title}</h2>
+				<div class="divider-line"></div>
 				<p>${block.content}</p>
-				<h3 class="block-title">${block.title}</h3>
+				<p>${block.description}</p>
 			</dialog>
 			</li>
 			`
@@ -156,8 +164,10 @@ let renderBlock = (block) => {
 					</button>
 					<dialog class="modal">
 						<button class="exit">×</button>
+						<h2>${block.title}</h2>
+						<div class="divider-line"></div>
 						<video controls src="${ block.attachment.url }"></video>
-						<h3 class="block-title">${block.title}</h3>
+						<p>${block.content}</p>
 					</dialog>
 				</li>
 				`
@@ -194,8 +204,10 @@ let renderBlock = (block) => {
 					<dialog class="modal">
 						<button class="exit">×</button>
 						<figure class="pdf-block">
+							<h2>${block.title}</h2>
+							<div class="divider-line"></div>
 							<img src="${ block.image.thumb.url }">
-							<h3 class="block-title">${ block.title }</h3>
+							<p>${block.description}</p>
 						</figure>
 					<dialog>
 				</li>
@@ -228,10 +240,11 @@ let renderBlock = (block) => {
 						</svg>
 					</button>
 					<dialog class="modal">
-						<h3>HELLO</h3>
 						<button class="exit">×</button>
+						<h2>${block.title}</h2>
+						<div class="divider-line"></div>
 						<audio controls src="${block.attachment.url}"></audio>
-						<h3 class="block-title">${ block.title }</h3>
+						<p>${block.description}</p>
 					</dialog>
 				</li>
 				`
@@ -271,8 +284,10 @@ let renderBlock = (block) => {
 				</button>
 				<dialog class="modal">
 					<button class="exit">×</button>
+					<h2>${block.title}</h2>
+					<div class="divider-line"></div>
 					${ block.embed.html }
-					<h3 class="block-title">${block.title}</h3>
+					<p>${block.description}</p>
 				</dialog>
 				</li>
 				`

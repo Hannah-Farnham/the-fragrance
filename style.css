@@ -166,7 +166,7 @@ p{
 }
 
 .nav-item::before {
-	content: ""; /* This is causing the site to be too wide */
+	content: ""; 
 	position: absolute;
 	top: 50%;
 	left: 50%;

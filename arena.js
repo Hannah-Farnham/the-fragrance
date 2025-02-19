@@ -53,6 +53,9 @@ let renderBlock = (block) => {
 			<dialog class="modal">
 				<button class="exit">×</button>
 				<h2>${block.title}</h2>
+				<h3>Parfum</h3>
+				<h4>Added By ${block.connected_by_username}</h4>
+				<div class="divider-line"></div>
 				<img src="${block.image.original.url}">
 				<p>${block.description}</p>
 			</dialog>
@@ -113,6 +116,8 @@ let renderBlock = (block) => {
 			<dialog class="modal">
 				<button class="exit">×</button>
 				<h2>${block.title}</h2>
+				<h3>Parfum</h3>
+				<h4>Added By ${block.connected_by_username}</h4>
 				<div class="divider-line"></div>
 				<p>${block.content}</p>
 				<p>${block.description}</p>
@@ -138,6 +143,8 @@ let renderBlock = (block) => {
 					<dialog class="modal">
 						<button class="exit">×</button>
 						<h2>${block.title}</h2>
+						<h3>Parfum</h3>
+						<h4>Added By ${block.connected_by_username}</h4>
 						<div class="divider-line"></div>
 						<video controls src="${ block.attachment.url }"></video>
 						<p>${block.content}</p>
@@ -170,6 +177,8 @@ let renderBlock = (block) => {
 						<button class="exit">×</button>
 						<figure class="pdf-block">
 							<h2>${block.title}</h2>
+							<h3>Parfum</h3>
+							<h4>Added By ${block.connected_by_username}</h4>
 							<div class="divider-line"></div>
 							<img src="${ block.image.thumb.url }">
 							<p>${block.description}</p>
@@ -199,6 +208,8 @@ let renderBlock = (block) => {
 					<dialog class="modal">
 						<button class="exit">×</button>
 						<h2>${block.title}</h2>
+						<h3>Parfum</h3>
+						<h4>Added By ${block.connected_by_username}</h4>
 						<div class="divider-line"></div>
 						<audio controls src="${block.attachment.url}"></audio>
 						<p>${block.description}</p>
@@ -242,6 +253,8 @@ let renderBlock = (block) => {
 				<dialog class="modal">
 					<button class="exit">×</button>
 					<h2>${block.title}</h2>
+					<h3>Parfum</h3>
+					<h4>Added By ${block.connected_by_username}</h4>
 					<div class="divider-line"></div>
 					${ block.embed.html }
 					<p>${block.description}</p>
@@ -357,30 +370,6 @@ let initInteraction = () => {
 		}
 	})
 
-	// let  pdfBlocks = document.querySelectorAll('.pdf-block')
-
-	// pdfBlocks.forEach((block) => {
-	// 	let openButton = block.querySelector('button')
-	// 	let dialog = block.querySelector('dialog')
-	// 	let closeButton = dialog.querySelector('button')
-
-	// 	openButton.onclick = () => {
-	// 		dialog.showModal()
-	// 	}
-
-	// 	closeButton.onclick = () => {
-	// 		dialog.close()
-	// 	}
-
-	// 	dialog.onclick = (event) => {
-	// 		if (event.target == dialog) {
-	// 			dialog.close()
-	// 		}
-	// 	}
-	// })
-
-	// …None of these are opening
-
 	let  audioBlocks = document.querySelectorAll('.audio-block')
 	audioBlocks.forEach((block) => {
 		let openButton = block.querySelector('button')
@@ -425,7 +414,32 @@ let initInteraction = () => {
 			}
 		}
 	})
+
+	let  pdfBlocks = document.querySelectorAll('.pdf-block')
+	pdfBlocks.forEach((block) => {
+		let openButton = block.querySelector('button')
+		let dialog = block.querySelector('dialog')
+		let closeButton = dialog.querySelector('button')
+
+
+		openButton.onclick = () => {
+			dialog.showModal();
+
+		}
+
+		closeButton.onclick = () => {
+			dialog.close()
+		}
+
+		dialog.onclick = (event) => {
+			if (event.target == dialog) {
+				dialog.close()
+			}
+		}
+	})
 }
+
+
 
 // Now that we have said what we can do, go get the data:
 fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-store' })

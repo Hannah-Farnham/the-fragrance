@@ -159,8 +159,6 @@ let renderBlock = (block) => {
 		// Uploaded PDFs!
 		else if (attachment.includes('pdf')) {
 
-			console.log("pdf", block)
-
 			let PdfItem =
 				`
 				<li class="pdf-block">
@@ -211,6 +209,7 @@ let renderBlock = (block) => {
 						<h3>Parfum</h3>
 						<h4>Added By ${block.connected_by_username}</h4>
 						<div class="divider-line"></div>
+						<img src="${ block.image.thumb.url }">
 						<audio controls src="${block.attachment.url}"></audio>
 						<p>${block.description}</p>
 					</dialog>

@@ -346,9 +346,8 @@ let initInteraction = () => {
 		}
 	})
 
-
-	let  attachmentBlocks = document.querySelectorAll('.attachment-block')
-	attachmentBlocks.forEach((block) => {
+	let  videoBlocks = document.querySelectorAll('.video-block')
+	videoBlocks.forEach((block) => {
 		let openButton = block.querySelector('button')
 		let dialog = block.querySelector('dialog')
 		let closeButton = dialog.querySelector('button')

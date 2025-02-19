@@ -395,6 +395,7 @@ p{
 }
 
 .modal h2 {
+	font-size: var(--size-3);
 	padding-bottom: var(--size-1);
 	padding-top: var(--size-1);
 	flex-grow: 1;
@@ -544,11 +545,14 @@ button{
 
 		/* Modal */
 
-
-	  .modal{
+	.modal{
 		padding: var(--size-2);
 		max-width: 500px;
 	  }
+
+	.modal h2 {
+		font-size: var(--size-4);
+	}
 
 		/* Ending Statement */
 

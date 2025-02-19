@@ -357,27 +357,27 @@ let initInteraction = () => {
 		}
 	})
 
-	let  pdfBlocks = document.querySelectorAll('.pdf-block')
+	// let  pdfBlocks = document.querySelectorAll('.pdf-block')
 
-	pdfBlocks.forEach((block) => {
-		let openButton = block.querySelector('button')
-		let dialog = block.querySelector('dialog')
-		let closeButton = dialog.querySelector('button')
+	// pdfBlocks.forEach((block) => {
+	// 	let openButton = block.querySelector('button')
+	// 	let dialog = block.querySelector('dialog')
+	// 	let closeButton = dialog.querySelector('button')
 
-		openButton.onclick = () => {
-			dialog.showModal()
-		}
+	// 	openButton.onclick = () => {
+	// 		dialog.showModal()
+	// 	}
 
-		closeButton.onclick = () => {
-			dialog.close()
-		}
+	// 	closeButton.onclick = () => {
+	// 		dialog.close()
+	// 	}
 
-		dialog.onclick = (event) => {
-			if (event.target == dialog) {
-				dialog.close()
-			}
-		}
-	})
+	// 	dialog.onclick = (event) => {
+	// 		if (event.target == dialog) {
+	// 			dialog.close()
+	// 		}
+	// 	}
+	// })
 
 	// …None of these are opening
 

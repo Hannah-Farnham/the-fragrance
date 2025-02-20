@@ -82,6 +82,7 @@ h1{
 	padding-bottom: var(--size-2);
 	line-height: 80%;
 	overflow-y: hidden;
+	mix-blend-mode: exclusion;
 }
 
 h2{

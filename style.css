@@ -201,7 +201,7 @@ p{
 
 .top-nav button:nth-child(2):hover{
 	cursor: crosshair; 
-	cursor: url('links/Cursors/Floral.svg'), auto;
+	cursor: url('links/Cursors/Floral2.svg'), auto;
 }
 
 .nav-item:nth-child(3)::before {

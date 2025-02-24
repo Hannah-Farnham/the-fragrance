@@ -85,6 +85,9 @@ h1{
 	mix-blend-mode: exclusion;
 }
 
+/* https://www.youtube.com/watch?v=V18Rvcxj1iA */
+/* Interesing text animations with CSS */
+
 h2{
 	font-family: var(--font-2);
 	font-size: var(--size-4);

@@ -173,14 +173,12 @@ let renderBlock = (block) => {
 					</button>
 					<dialog class="modal">
 						<button class="exit">×</button>
-						<figure class="pdf-block">
 							<h2>${block.title}</h2>
 							<h3>Parfum</h3>
 							<h4>Added By ${block.connected_by_username}</h4>
 							<div class="divider-line"></div>
 							<img src="${ block.image.thumb.url }">
 							<p>${block.description}</p>
-						</figure>
 					<dialog>
 				</li>
 				`

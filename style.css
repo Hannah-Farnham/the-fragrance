@@ -40,14 +40,12 @@
 	--font-3: "Cutive Mono", serif;
 	--font-4: "adobe-garamond-pro", serif;
 	--font-5: "neue-haas-grotesk-text", sans-serif;
-
 }
 
 	/* Main */
 
 body{
 	background-color: var(--color-dark);
-	height: 200vh;
 }
 
 #background-image img{

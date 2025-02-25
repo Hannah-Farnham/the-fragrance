@@ -420,7 +420,15 @@ p{
 	height: 1px;
 	background-color: var(--color-light);
 	margin: 20px 0;
-} 
+}
+
+.modal-link{
+	font-family: var(--font-3);
+	text-decoration: underline;
+	font-weight: 800;
+	padding: var(--size-3);
+
+}
 
 .link{
 	color: var(--color-light)

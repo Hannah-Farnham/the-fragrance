@@ -58,6 +58,7 @@ let renderBlock = (block) => {
 				<div class="divider-line"></div>
 				<img src="${block.image.original.url}">
 				<p>${block.description}</p>
+				<a class="Modal-Link" href="${ block.source.url }">Discover More</a>
 			</dialog>
 		</li>
 		`

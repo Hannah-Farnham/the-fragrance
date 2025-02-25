@@ -47,12 +47,14 @@ let renderBlock = (block) => {
 			</button>
 			<dialog class="modal">
 				<button class="exit">×</button>
-				<h2>${block.title}</h2>
-				<h3>Parfum</h3>
-				<h4>Added By ${block.connected_by_username}</h4>
-				<div class="divider-line"></div>
-				<img src="${block.image.original.url}">
-				<p>${block.description}</p>
+				<div class="modal-contents">
+					<h2>${block.title}</h2>
+					<h3>Parfum</h3>
+					<h4>Added By ${block.connected_by_username}</h4>
+					<div class="divider-line"></div>
+					<img src="${block.image.original.url}">
+					<p>${block.description}</p>
+				</div>
 				<a class="Modal-Link" href="${ block.source.url }">Discover More</a>
 			</dialog>
 		</li>
@@ -79,12 +81,14 @@ let renderBlock = (block) => {
 			</button>
 			<dialog class="modal">
 					<button class="exit">×</button>
+					<div class="modal-contents">
 						<h2>${block.title}</h2>
 						<h3>Parfum</h3>
 						<h4>Added By ${block.connected_by_username}</h4>
 						<div class="divider-line"></div>
 						<img src="${block.image.large.url}">
 						<p>${block.description}</p>
+					</div>
 			</dialog>
 			</li>
 			`
@@ -111,12 +115,14 @@ let renderBlock = (block) => {
 			</button>
 			<dialog class="modal">
 				<button class="exit">×</button>
-				<h2>${block.title}</h2>
-				<h3>Parfum</h3>
-				<h4>Added By ${block.connected_by_username}</h4>
-				<div class="divider-line"></div>
-				<p>${block.content}</p>
-				<p>${ block.description_html ? block.description_html : '' }</p>
+				<div class="modal-contents">
+					<h2>${block.title}</h2>
+					<h3>Parfum</h3>
+					<h4>Added By ${block.connected_by_username}</h4>
+					<div class="divider-line"></div>
+					<p id="just-text">${block.content}</p>
+					<p>${ block.description_html ? block.description_html : '' }</p>
+				</div>
 			</dialog>
 			</li>
 			`
@@ -183,12 +189,14 @@ let renderBlock = (block) => {
 					</button>
 					<dialog class="modal">
 						<button class="exit">×</button>
+						<div class="modal-contents">
 							<h2>${block.title}</h2>
 							<h3>Parfum</h3>
 							<h4>Added By ${block.connected_by_username}</h4>
 							<div class="divider-line"></div>
 							<img src="${ block.image.thumb.url }">
 							<p>${ block.description_html ? block.description_html : '' }</p>
+						</div>
 					<dialog>
 				</li>
 				`
@@ -213,13 +221,15 @@ let renderBlock = (block) => {
 					</button>
 					<dialog class="modal">
 						<button class="exit">×</button>
-						<h2>${block.title}</h2>
-						<h3>Parfum</h3>
-						<h4>Added By ${block.connected_by_username}</h4>
-						<div class="divider-line"></div>
-						<img src="${ block.image.thumb.url }">
-						<audio controls src="${block.attachment.url}"></audio>
-						<p>${ block.description_html ? block.description_html : '' }</p>
+						<div class="modal-contents">
+							<h2>${block.title}</h2>
+							<h3>Parfum</h3>
+							<h4>Added By ${block.connected_by_username}</h4>
+							<div class="divider-line"></div>
+							<img src="${ block.image.thumb.url }">
+							<audio controls src="${block.attachment.url}"></audio>
+							<p>${ block.description_html ? block.description_html : '' }</p>
+						</div>
 					</dialog>
 				</li>
 				`

@@ -204,91 +204,82 @@ p{
 }
 
 .nav-item:nth-child(3)::before {
-	background: #86624680;
+	background: #EA2C2F80;
 }
 
 .top-nav button:nth-child(3):hover{
 	cursor: crosshair; 
-	cursor: url('links/Cursors/Musk.svg'), auto;
+	cursor: url('links/Cursors/Fruity.svg'), auto;
 }
 
 .nav-item:nth-child(4)::before {
-	background: #EA2C2F80;
+	background: #ECB92C80;
 }
 
 .top-nav button:nth-child(4):hover{
 	cursor: crosshair; 
-	cursor: url('links/Cursors/Fruity.svg'), auto;
+	cursor: url('links/Cursors/Citrus.svg'), auto;
 }
 
 .nav-item:nth-child(5)::before {
-	background: #ECB92C80;
+	background: #63361A80;
 }
 
 .top-nav button:nth-child(5):hover{
 	cursor: crosshair; 
-	cursor: url('links/Cursors/Citrus.svg'), auto;
+	cursor: url('links/Cursors/Woody.svg'), auto;
 }
 
 .nav-item:nth-child(6)::before {
-	background: #63361A80;
+	background: #16623280;
 }
 
 .top-nav button:nth-child(6):hover{
 	cursor: crosshair; 
-	cursor: url('links/Cursors/Woody.svg'), auto;
+	cursor: url('links/Cursors/Green.svg'), auto;
 }
 
 .nav-item:nth-child(7)::before {
-	background: #16623280;
+	background: #83D8EF80;
 }
 
 .top-nav button:nth-child(7):hover{
 	cursor: crosshair; 
-	cursor: url('links/Cursors/Green.svg'), auto;
+	cursor: url('links/Cursors/Ozonic.svg'), auto;
 }
 
 .nav-item:nth-child(8)::before {
-	background: #83D8EF80;
+	background: #80a75080;
 }
 
 .top-nav button:nth-child(8):hover{
 	cursor: crosshair; 
-	cursor: url('links/Cursors/Ozonic.svg'), auto;
+	cursor: url('links/Cursors/Herbal.svg'), auto;
 }
 
 .nav-item:nth-child(9)::before {
-	background: #80a75080;
+	background: #ff9d0980;
 }
 
 .top-nav button:nth-child(9):hover{
 	cursor: crosshair; 
-	cursor: url('links/Cursors/Herbal.svg'), auto;
+	cursor: url('links/Cursors/Resinous.svg'), auto;
 }
 
 .nav-item:nth-child(10)::before {
-	background: #ff9d0980;
+	background: #A99D9A80;
 }
 
 .top-nav button:nth-child(10):hover{
 	cursor: crosshair; 
-	cursor: url('links/Cursors/Resinous.svg'), auto;
-}
-
-.nav-item:nth-child(11)::before {
-	background: #A99D9A80;
-}
-
-.top-nav button:nth-child(11):hover{
-	cursor: crosshair; 
 	cursor: url('links/Cursors/Smoky.svg'), auto;
 }
 
-.nav-item:nth-child(12)::before {
+.nav-item:nth-child(11)::before {
 	background: #6c5f1f80;
 }
 
-.top-nav button:nth-child(12):hover{
+.top-nav button:nth-child(11):hover{
 	cursor: crosshair; 
 	cursor: url('links/Cursors/Earthy.svg'), auto;
 }

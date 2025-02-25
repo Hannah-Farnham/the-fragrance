@@ -21,12 +21,7 @@ let placeChannelInfo = (data) => {
 
 	// Then set their content/attributes to our data:
 	channelTitle.innerHTML = data.title
-	// channelDescription.innerHTML = window.markdownit().render(data.metadata.description) // Converts Markdown → HTML
-	// channelCount.innerHTML = data.length
-	// channelLink.href = `https://www.are.na/channel/${channelSlug}`
 }
-
-
 
 // Then our big function for specific-block-type rendering:
 let renderBlock = (block) => {
@@ -280,21 +275,6 @@ let renderBlock = (block) => {
 	}
 }
 
-
-
-// It‘s always good to credit your work:
-// let renderUser = (user, container) => { // You can have multiple arguments for a function!
-// 	let userAddress =
-// 		`
-// 		<address>
-// 			<img src="${ user.avatar_image.display }">
-// 			<h3>${ user.first_name }</h3>
-// 			<p><a href="https://are.na/${ user.slug }">Are.na profile ↗</a></p>
-// 		</address>
-// 		`
-// 	container.insertAdjacentHTML('beforeend', userAddress)
-// }
-
 let initInteraction = () => {
 	let  linkBlocks = document.querySelectorAll('.link-block')
 	linkBlocks.forEach((block) => {
@@ -466,9 +446,4 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
 		})
 
 		initInteraction()
-
-		// Also display the owner and collaborators:
-		// let channelUsers = document.getElementById('channel-users') // Show them together
-		// data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
-		// renderUser(data.user, channelUsers)
 	})

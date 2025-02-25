@@ -121,7 +121,7 @@ let renderBlock = (block) => {
 				<h4>Added By ${block.connected_by_username}</h4>
 				<div class="divider-line"></div>
 				<p>${block.content}</p>
-				<p>${block.description}</p>
+				<p>${ block.description_html ? block.description_html : '' }</p>
 			</dialog>
 			</li>
 			`
@@ -139,7 +139,21 @@ let renderBlock = (block) => {
 				`
 				<li class="attachment-block">
 					<button>
-						<h2> Hello?? </h3>
+					<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.87 192.94">
+							<defs>
+							<style>
+								.cls-1 {
+								fill: none;
+								stroke: #fff;
+								stroke-miterlimit: 10;
+								stroke-width: 2px;
+								}
+							</style>
+							</defs>
+							<g id="Layer_1-2" data-name="Layer_1">
+							<path class="cls-1" d="M144.37,116.67c0,45.76-41.71,74.07-41.71,74.07,0,0-9.58,1.7-30.23,1.7s-30.22-1.7-30.22-1.7c0,0-41.71-28.31-41.71-74.07S50.09,44.74,50.09,44.74c0,0,7.72-5.72,7.72-15.62s-5.73-12.43-5.73-12.43h0l-19.47-1.13V2.5L72.43.5l39.83,2v13.06l-19.48,1.13h0s-5.72,2.53-5.72,12.43,7.72,15.62,7.72,15.62c0,0,49.59,26.18,49.59,71.93Z"/>
+							</g>
+						</svg>
 					</button>
 					<dialog class="modal">
 						<button class="exit">×</button>
@@ -148,7 +162,7 @@ let renderBlock = (block) => {
 						<h4>Added By ${block.connected_by_username}</h4>
 						<div class="divider-line"></div>
 						<video controls src="${ block.attachment.url }"></video>
-						<p>${block.content}</p>
+						<p>${ block.description_html ? block.description_html : '' }</p>
 					</dialog>
 				</li>
 				`
@@ -179,7 +193,7 @@ let renderBlock = (block) => {
 							<h4>Added By ${block.connected_by_username}</h4>
 							<div class="divider-line"></div>
 							<img src="${ block.image.thumb.url }">
-							<p>${block.description}</p>
+							<p>${ block.description_html ? block.description_html : '' }</p>
 					<dialog>
 				</li>
 				`
@@ -210,7 +224,7 @@ let renderBlock = (block) => {
 						<div class="divider-line"></div>
 						<img src="${ block.image.thumb.url }">
 						<audio controls src="${block.attachment.url}"></audio>
-						<p>${block.description}</p>
+						<p>${ block.description_html ? block.description_html : '' }</p>
 					</dialog>
 				</li>
 				`
@@ -255,7 +269,7 @@ let renderBlock = (block) => {
 					<h4>Added By ${block.connected_by_username}</h4>
 					<div class="divider-line"></div>
 					${ block.embed.html }
-					<p>${block.description}</p>
+					<p>${ block.description_html ? block.description_html : '' }</p>
 				</dialog>
 				</li>
 				`

@@ -47,6 +47,7 @@
 
 body{
 	background-color: var(--color-dark);
+	height: 200vh;
 }
 
 #background-image img{
@@ -365,6 +366,7 @@ p{
 	align-items: center;
 	justify-content: center;
 	border: var(--color-light) solid 1px;
+	transition: background-color 0.5s ease-in-out;
 }
 
 .blocks li svg {
@@ -372,8 +374,9 @@ p{
 	height: 135px;
   }
 
-.blocks li:hover{
-	background-color: black;
+.blocks li:hover,
+.blocks li.visible {
+	  background-color: black;
 }
 
 	/* Modal  */

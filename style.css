@@ -362,6 +362,15 @@ p{
 	filter: grayscale(0%); 
 }
 
+iframe {
+	filter: grayscale(100%);
+	transition: filter 0.3s ease-in-out; 
+}
+
+iframe:hover {
+	filter: grayscale(0%);
+}
+
 .modal-contents{
 	display: flex;
 	justify-content: center;
@@ -571,6 +580,7 @@ button{
 	}
 
 	#just-text {
+		font-size: var(--size-2);
 		display: -webkit-box;
 		-webkit-line-clamp: 14; 
 		-webkit-box-orient: vertical;

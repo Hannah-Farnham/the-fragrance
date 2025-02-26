@@ -81,7 +81,6 @@ h1{
 	padding-bottom: var(--size-2);
 	line-height: 80%;
 	overflow-y: hidden;
-	/* mix-blend-mode: exclusion; */
 }
 
 /* https://www.youtube.com/watch?v=V18Rvcxj1iA */
@@ -133,7 +132,10 @@ p{
 	font-style: italic;
 }
 
-::selection { /* https://www.w3schools.com/howto/howto_css_text_selection.asp */
+::selection { 
+/* https://www.w3schools.com/howto/howto_css_text_selection.asp 
+I used this to have the text highlight be black.
+*/
 	background-color: var(--color-dark); 
 }
 
@@ -183,7 +185,9 @@ p{
 	z-index: -1;
 }
 
-/* reference: https://stackoverflow.com/questions/8874326/how-to-make-a-hover-effect-for-pseudo-elements? */
+/* reference: https://stackoverflow.com/questions/8874326/how-to-make-a-hover-effect-for-pseudo-elements? 
+I used this to change the background color on hover.
+*/
 
 .nav-item:first-child::before {
 	background: #EC522C80;
@@ -334,6 +338,7 @@ p{
 	  background-color: black;
 }
 
+
 	/* Modal  */
 
 .modal{
@@ -458,8 +463,8 @@ body:has(dialog[open]) {
 }
 
 iframe {
-    width: 100%; /* Or any specific width like 600px */
-    height: 300px; /* Keeps the aspect ratio intact */
+	width: 100%;
+	height: 300px; 
 }
 
 .exit{
@@ -513,10 +518,10 @@ button{
 
 #footer{
 	display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Creates two equal-width columns */
-    gap: var(--size-1); /* Adds space between the items */
-    justify-items: center; /* Centers items horizontally */
-    align-items: center; /* Centers items vertically */
+	grid-template-columns: repeat(1, 1fr); 
+	gap: var(--size-1);
+	justify-items: center; 
+	align-items: center; 
 	padding: var(--size-1);
 }
 
@@ -548,6 +553,12 @@ button{
 
 	.nav-item{
 		font-size: var(--size-1);
+	}
+
+	/* Header */
+
+	header{
+		padding-bottom: var(--size-3);
 	}
 
 		/* Cards with Perfume Bottles */
@@ -656,6 +667,10 @@ button{
 
 		/* Header */
 
+	header{
+		padding-bottom: var(--size-3);
+	}
+	
 	#channel-title{
 		line-height: 80%;
 		padding-bottom: var(--size-2);
@@ -664,7 +679,7 @@ button{
 	#fragrance-description{
 		max-width: 1200px;
 		margin: 0 auto;
-		padding-bottom: var(--size-2);
+		/* font-size: var(--size-1); */
 	}	
 
 		/* Ending Statement */

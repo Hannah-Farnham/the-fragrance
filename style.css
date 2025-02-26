@@ -351,9 +351,10 @@ I used this to change the background color on hover.
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 1000;
-	width: 300px;
+	width: 90vw;
 	text-align: center;
-	height: 80vh;
+	height: 90vh;
+	overflow: hidden;
 	img{
 		max-width: 80%; 
 		max-height: 400px;
@@ -399,12 +400,11 @@ iframe:hover {
 
 .modal p {
 	padding-top: var(--size-2);
-	line-height: 120%;
+	line-height: 140%;
 	display: -webkit-box;
 	-webkit-line-clamp: 4; 
 	-webkit-box-orient: vertical;
 	overflow: hidden;
-	width: 80%;
 }
 
 #just-text {
@@ -414,6 +414,7 @@ iframe:hover {
 	-webkit-line-clamp: 10; 
 	-webkit-box-orient: vertical;
 	overflow: hidden;
+	word-break: break-word;
 }
 
 .divider-line{
@@ -423,20 +424,24 @@ iframe:hover {
 	margin: var(--size-2) 0;
 }
 
+.divider-line-bottom{
+	height: 1px;
+	width: 100%;
+	background-color: var(--color-light);
+	margin: 0 0;
+	margin-top: var(--size-2);
+}
+
 .modal-link{
 	font-family: var(--font-1);
 	padding: var(--size-1);
 	border: 1px var(--color-light) solid;
 	text-transform: uppercase;
-	background-color: rgba(0, 0, 0, 0.75);
+	background-color: var(--color-dark);
 	position: absolute;
-	bottom: -10%;
-	left: 0;
-	transition: background-color 0.2s ease-in-out;
-}
-
-.modal-link:hover{
-	background-color: rgba(255, 255, 255, .1);
+	bottom: 40%;
+	left: -52;
+	transform: rotate(-90deg);
 }
 
 .modal audio {
@@ -446,7 +451,7 @@ iframe:hover {
 	left: 0;
 	width: 100%;
 	bottom: 0;
-	padding: var(--size-4);
+	padding: var(--size-2);
 }
 
 .pdf-description{
@@ -481,6 +486,7 @@ iframe {
 	top: 0px;
 	right: 0px;
 	z-index: 1000;
+	background-color: var(--color-dark);
 }
 
 .exit:hover {
@@ -513,6 +519,7 @@ button{
 
 #h3-ending-statement{
 	color: var(--color-light);
+	padding: var(--size-1);
 }
 
 	/* Footer */
@@ -536,6 +543,17 @@ button{
 }
 
 	/* Media Queries */
+
+@media (min-width: 600px) {
+
+	.modal {
+		width: 90vw;
+	}
+
+	.modal audio {
+		padding: var(--size-4);
+	}
+}
 
 @media (min-width: 860px) {
 
@@ -588,19 +606,22 @@ button{
 	  }
 
 	.modal h2 {
-		font-size: var(--size-4);
+		font-size: calc(var(--size-3)*1.5);
+		padding-bottom: var(--size-1);
 	}
 		
 	.modal h3 {
 		font-size: var(--size-2);
+		padding-bottom: var(--size-1);
 	}
 
 	#just-text {
-		font-size: var(--size-2);
+		font-size: calc(var(--size-1)*1.4);
 		display: -webkit-box;
 		-webkit-line-clamp: 14; 
 		-webkit-box-orient: vertical;
 		overflow: hidden;
+		padding: 0;
 	}
 
 	.modal p {
@@ -611,11 +632,21 @@ button{
 		margin: var(--size-2) 0;
 	}
 
+	.divider-line-bottom{
+		margin: var(--size-2) 0;
+		margin-bottom: 0;
+	}
+
 	.modal-link{
 		bottom: 40%;
 		left: -74;
     	width: 200px;
 		transform: rotate(-90deg);
+		transition: background-color 0.2s ease-in-out;
+	}
+
+	.modal-link:hover{
+		background-color: rgba(255, 255, 255, .1);
 	}
 
 	.exit{
@@ -666,25 +697,6 @@ button{
 @media (min-width: 1200px) {
 
 	/* Modal */
-
-	.modal-link{
-		bottom: 50%;
-		left: -30%;
-		width: 180px;
-		transform: none;
-		animation: move 2s ease-in-out 1s forwards;
-	}
-
-	@keyframes move {
-		0% {
-			bottom: 50%;
-			left: -30%;
-		}
-		100% {
-			bottom: 50%;
-			left: 100%;
-		}
-	}
 
 	.modal{
 		padding: var(--size-2);

@@ -122,7 +122,7 @@ let renderBlock = (block) => {
 					<div class="divider-line"></div>
 					<p id="just-text">${block.content}</p>
 					<p>${ block.description_html ? block.description_html : '' }</p>
-					<div class="divider-line"></div>
+					<div class="divider-line-bottom"></div>
 				</div>
 			</dialog>
 			</li>

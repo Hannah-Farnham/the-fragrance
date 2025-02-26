@@ -367,6 +367,14 @@ I used this to change the background color on hover.
 	filter: grayscale(0%); 
 }
 
+.audio-block{
+	.modal{
+		img{
+			filter: none;
+		}
+	}
+}
+
 iframe {
 	filter: grayscale(100%);
 	transition: filter 0.3s ease-in-out; 
@@ -666,10 +674,6 @@ button{
 	}
 
 		/* Header */
-
-	header{
-		padding-bottom: var(--size-3);
-	}
 	
 	#channel-title{
 		line-height: 80%;
